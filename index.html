@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="/script.js" defer></script>
+    <title>Pig Game</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="quote">
+        <p>Greed is so destructive. It destroys everything. -Eartha Kitt</p>
+      </div>
+    </header>
+
+    <div class="overlay hidden" id="overlay"></div>
+
+    <div class="help-modal hidden" id="helpModal">
+      <div class="modal-wrapper">
+        <img
+          class="close-modal"
+          id="closeModal"
+          src="/img/close.svg"
+          alt="close rules"
+        />
+        <h2>Rules</h2>
+        <ul>
+          <li>Choose one of the two players (i.e. Player 1 or Player 2)</li>
+          <li>
+            On your turn, you can roll a dice and the number that appears on the
+            dice will be added to your current score.
+          </li>
+          <li>
+            You can roll a dice as many time you until a one appears on the
+            dice.
+          </li>
+          <li>
+            If a one appears on the dice then your current score will reset back
+            to zero.
+          </li>
+          <li>
+            On each roll of dice, you can either do another roll or pass it to
+            next player.
+          </li>
+          <li>Whoever reaches to 100 points first will win the game.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="player-wins hidden" id="winnerScreen">
+      <span class="winner-name" id="winnerName">Player 1</span>
+      <span class="wins-wrapper">
+        Wins
+        <img
+          id="winnerFace"
+          width="40px"
+          src="/img/faceF.svg"
+          alt="player 2 wins"
+        />
+      </span>
+      <div class="winnerScreen-restart">
+        <button class="new-game" id="newGame">
+          <img
+            class="restart-img"
+            width="25px"
+            src="/img/restart.svg"
+            alt="restart"
+          />
+          New Game
+        </button>
+      </div>
+    </div>
+
+    <main class="card">
+      <img
+        class="turn"
+        id="turn"
+        width="30px"
+        height="30px"
+        src="/img/turn.svg"
+        alt="your turn"
+      />
+      <img
+        class="help"
+        id="help"
+        width="30px"
+        height="30px"
+        src="/img/help.svg"
+        alt="help"
+      />
+      <div class="card-wrapper">
+        <div class="left--card">
+          <span class="player--heading left--heading">
+            <img width="25px" src="/img/faceM.svg" alt="player1" />
+            Player 1
+          </span>
+          <div class="total-score score-left">
+            <img
+              width="50px"
+              height="50px"
+              src="/img/score1.svg"
+              alt="Total Score"
+            />
+            <span class="final-score1" id="finalScore1">10</span>
+          </div>
+          <div class="current-score-container current-score-container1">
+            <img
+              width="30px"
+              src="/img/current-score1.svg"
+              alt="current score"
+            />
+            <span class="current-score current-score1" id="currentScore1"
+              >100</span
+            >
+          </div>
+        </div>
+        <div class="controls">
+          <div class="upper-controls">
+            <button class="new-game" id="newGame">
+              <img
+                class="restart-img"
+                width="25px"
+                src="/img/restart.svg"
+                alt="restart"
+              />
+              New Game
+            </button>
+            <div class="thrown-dice-images">
+              <img
+                id="throwDiceImages"
+                width="60px"
+                src="/img/Dice1.png"
+                alt="dice image"
+              />
+            </div>
+          </div>
+          <div class="lower-controls">
+            <button class="roll-dice" id="rollDice">
+              <img
+                class="dice-img"
+                width="25px"
+                src="/img/dice.svg"
+                alt="dice"
+              />
+              Roll Dice
+            </button>
+            <button class="pass" id="pass">
+              <img
+                class="wait-img"
+                width="25px"
+                src="/img/wait.svg"
+                alt="pass"
+              />
+              Pass
+            </button>
+          </div>
+        </div>
+        <div class="right--card">
+          <span class="player--heading right--heading">
+            <img width="25px" src="/img/faceF.svg" alt="player1" />
+            Player 2
+          </span>
+          <div class="total-score score-right">
+            <img
+              width="50px"
+              height="50px"
+              src="/img/score2.svg"
+              alt="Total Score"
+            />
+            <span class="final-score2" id="finalScore2">10</span>
+          </div>
+          <div class="current-score-container current-score-container2">
+            <img
+              width="30px"
+              src="/img/current-score2.svg"
+              alt="current score"
+            />
+            <span class="current-score current-score2" id="currentScore2"
+              >100</span
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <span class="footer-text"
+        ><a href="https://github.com/MasterGR2021">~G.Raw@</a></span
+      >
+    </footer>
+  </body>
+</html>
